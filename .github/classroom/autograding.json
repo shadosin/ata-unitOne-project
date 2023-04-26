@@ -1,0 +1,54 @@
+{
+  "tests": [
+    {
+      "name": "CalendarApp Task 1 Tests",
+      "setup": "",
+      "run": "./gradlew calendarapp-task1 --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "CalendarApp Task 2 Tests",
+      "setup": "",
+      "run": "./gradlew calendarapp-task2 --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "CalendarApp Task 3 Tests",
+      "setup": "",
+      "run": "./gradlew calendarapp-task3 --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "CalendarApp Task 4 Tests",
+      "setup": "export DISPLAY=localhost:0.0",
+      "run": "./gradlew calendarapp-task4 --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "CalendarApp Task 5 Tests",
+      "setup": "",
+      "run": "./gradlew calendarapp-task5 --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
