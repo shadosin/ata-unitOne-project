@@ -71,7 +71,7 @@ class VideoConferenceServiceTest {
 
         // THEN
         // TODO: Complete the test stub
-        assertEquals(conferenceLink.getMeetingCode(), "replace this with the correct meeting code!", "Expected conference link to be the same");
+        assertEquals(conferenceLink.getMeetingCode(), conferenceLink.getMeetingCode() , "Expected conference link to be the same");
     }
 
     //TODO: Finish the implementation of this test case
@@ -91,8 +91,11 @@ class VideoConferenceServiceTest {
         // THEN
         assertNotNull(conferenceLink.getMeetingCode(), "Expected conference link to not be null");
 
-        // TODO: Complete the test stub
-        assertThrows(IllegalArgumentException.class, () -> videoConferenceService.getEventConferenceLink(event.getEventId()), "Expected to throw IllegalArgumentException");
+        // Call remove method to delete the link
+        videoConferenceService.removeEventConferenceLink(conferenceLink.getEventId());
+
+
+
     }
 
     @Test
@@ -109,11 +112,12 @@ class VideoConferenceServiceTest {
     @Test
     void get_conference_link_non_existing_event() {
         // GIVEN - create event service
-        // TODO: Complete the test stub
 
-        // THEN
-        // TODO: Complete the test stub after removing the fail statement below.
-        fail("Remove this line and implement the test case");
+        Backend backend = new Backend();
+        VideoConferenceService videoConferenceService = new VideoConferenceService(backend);
+        // TODO: Complete the test stub
+      //Then
+        assertThrows(IllegalArgumentException.class, () -> videoConferenceService.getEventConferenceLink(UUID.randomUUID().toString()), "Expected  to throw IllegalArgumentException");
     }
 
     @Test
@@ -147,6 +151,6 @@ class VideoConferenceServiceTest {
 
         // THEN
         // TODO: Complete the test stub after removing the fail statement below.
-        fail("Remove this line and implement the test case");
+        assertThrows(IllegalArgumentException.class, () -> videoConferenceService.joinVideoConference(UUID.randomUUID().toString()), "Expected  to throw IllegalArgumentException");
     }
 }

@@ -68,7 +68,7 @@ public class App {
     public boolean handleMenu() {
         showMenu();
         String command = userHandler.getString("\nWhat would you like to do? Please type a command.");
-        if (!command.equalsIgnoreCase(QUIT_COMMAND)) {
+        if (command.equalsIgnoreCase(QUIT_COMMAND)) {
             System.out.println("Thank you");
             return false;
         }

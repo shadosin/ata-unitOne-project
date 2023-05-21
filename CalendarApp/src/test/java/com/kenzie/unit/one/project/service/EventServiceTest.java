@@ -44,12 +44,13 @@ class EventServiceTest {
     @Test
     void share_calendar_returns_distinct_list() {
         // GIVEN
+        Backend backend = new Backend();
+        EventService eventService = new EventService(backend);
 
-        // WHEN
+        // WHEN - construct TimestampedData
+        String person = "Someone";
 
         // THEN
-        
-        // Replace this line when you make the test
-        assertTrue(false);
+        assertThrows(IllegalArgumentException.class, () -> eventService.getMeetingEvents(person), "Expected to throw IllegalArgumentException");
     }
 }

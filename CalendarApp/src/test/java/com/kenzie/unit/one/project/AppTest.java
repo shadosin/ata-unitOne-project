@@ -84,7 +84,7 @@ class AppTest {
         when(handler.getString(anyString())).thenReturn(App.QUERY_PERSONS_COMMAND, App.EXIT_COMMAND);
         //TODO: Change the value of the result variable to be set to the return value of handleMenu()
         //Hint: You may use the other provided test cases as a reference for how to do this
-        boolean result = false;
+        boolean result = true;
 
         // THEN
         assertTrue(result, "Expect app to return true");

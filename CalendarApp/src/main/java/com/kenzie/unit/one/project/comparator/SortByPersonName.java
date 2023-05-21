@@ -9,6 +9,6 @@ public class SortByPersonName implements Comparator<Person> {
     @Override
     public int compare(Person firstPerson, Person secondPerson) {
         //TODO: Implement this compare method to properly sort the list of persons
-        return 0;
+        return firstPerson.getPersonName().compareToIgnoreCase(secondPerson.getPersonName());
     }
 }

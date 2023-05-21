@@ -1,10 +1,12 @@
 package com.kenzie.unit.one.project.service;
 
 import com.kenzie.unit.one.project.backend.Backend;
+import com.kenzie.unit.one.project.comparator.SortByPersonName;
 import com.kenzie.unit.one.project.models.Person;
 import com.kenzie.unit.one.project.models.PersonDto;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class PersonService {
@@ -25,6 +27,7 @@ public class PersonService {
                     .build();
             listPersons.add(person);
         }
+        Collections.sort(listPersons, new SortByPersonName());
         return listPersons;
     }
 
